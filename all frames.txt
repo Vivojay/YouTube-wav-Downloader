@@ -1,0 +1,7 @@
+       <p>Emily Vu - Self Love (Lyrics)</p>
+		
+		<iframe
+			width="560" height = "340" frameborder="0" scrolling="no" id="iframe" title = "vid1"
+			src="https://www.youtube.com/embed/R5x5g0mr6Ys">
+		</iframe>
+
