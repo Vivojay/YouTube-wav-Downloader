@@ -1,3 +1,4 @@
+
 # YouTube-wav-Downloader
 
 ## Who needs this?
@@ -49,15 +50,17 @@ This program **may require** that you [download the 7zip archiving program](http
 1. You can download audio from **any** YouTube URL you want.
 2. You can download audios from **multiple** YouTube video URLs at once.
 3. You can use the simple built in **text-based YouTube search** to search and download videos you like.
-4. Any duplicate files will automatically be detected and will NOT be downloaded.
-5. After confirming downloads, you will be shown the selected downloaded videos **in your browser**.
+4. Any **duplicate files** will automatically be detected and will NOT be downloaded.
+5. *New:* You can now download all songs from **Playlists on YouTube Music**
+6. *New:* You can now download YouTube audios by adding urls to **separate "urls.txt" file** instead of writing typing out each one [Explained Later]
+7. After confirming downloads, you will be shown the selected downloaded videos **in your browser**.
 
 **Note: Downloaded videos are always converted to `.wav` format**
 
 ## Usage Instructions
 1. **Make sure all requirements are satisfied before starting with the usage.**
-2. When cmd opens up, type the path to the folder where the the files are downloaded.
-   **E.g.** If you have downloaded the files in the folder **youtube_downloader** in the folder 
+2. When cmd opens up, type the path to the folder where this project's files are downloaded.
+   **E.g.** If you have downloaded the files in the folder **youtube_downloader** in the location 
    **C:\Users\Vivo Jay\Downloads** you will need to do the following:
    Type `cd "C:\Users\Vivo Jay\Downloads"` and hit enter.
 
@@ -66,7 +69,7 @@ This program **may require** that you [download the 7zip archiving program](http
 3. Just to check if installations have been successful, type `py download.py` and hit enter, if it shows `Error: No parameters entered, exiting...`, then it means **the program is working fine**.
 4. Now to actually download the audio from the YouTube video, there are **two methods.**
 
-- **Method 1 [Download from URL]:** Enter one or multiple URLs in double quotes separated by a space after `py download.py`. For example if you want to download audios from the following URLs:
+- **Method 1 of 4 [Download from URL]:** Enter one or multiple URLs in double quotes separated by a space after `py download.py`. For example if you want to download audios from the following URLs:
   - https://www.youtube.com/watch?v=RT5pYfOavkA
   - https://www.youtube.com/watch?v=7XcuZ8wZ3BY
   - https://www.youtube.com/watch?v=2qYLxw0Knu4
@@ -81,7 +84,7 @@ Then it asks you where you want to save the file.
 Here, you can either:
 
 - Enter/paste the path you want OR
-- Don't type anything and just hit enter to **automatically** download in the **default Downloads** directory
+- Don't type anything and just hit enter to **automatically** download in the **default Downloads** folder
 
 ### **Here's a detailed guide on how to download audios**
 
@@ -115,7 +118,7 @@ Here, you can either:
 #### It always asks you for confirmation before downloads and you can cancel downloads if you wish
 ![10_PS_Cancel_Downloads.png](res/PS/10_PS_Cancel_Downloads.png)
 
-- **Method 2 [Search and Download]:** If you want to search for a video and then download it, just type `py download.py s` followed by the search terms (without double quotes this time).
+- **Method 2 of 4 [Search and Download]:** If you want to search for a video and then download it, just type `py download.py s` followed by the search terms (without double quotes this time).
   **E.g.** If you want to search for "lolo zouai moi lyric video" then type the following command:
   `py download.py s lolo zouai moi lyric video`
 
@@ -129,7 +132,7 @@ Here, you can either:
 #### Just like before, enter the path you would like to save the audio(s) to
 ![13_PS_Enter_Path_Just_Like_Before.png](res/PS/13_PS_Enter_Path_Just_Like_Before.png)
 
-#### One thing, if you leave the save location empty, it will automatically save to the Default Download Path
+#### Note that if you leave the save location empty, it will automatically save to the Default Download Path
 ![14_PS_Download_In_Default_Downloads_Directory](res/PS/14_PS_Download_In_Default_Downloads_Directory.png)
 
 #### The selected audios will be displayed in a table
@@ -141,3 +144,44 @@ Here, you can either:
 ### You will now be able to see the downloaded audios where you saved them
 ![Files_In_Explorer](res/Files_In_Explorer.png)
 
+- **Method 3 of 4 [Download URLs from text file]:** This provides you an **easier** way to enter URLs.\
+  How does it work?
+  Instead of entering URLs in the terminal directly, you can now add them in a text file in *separate lines* and save it in **"urls.txt"**.
+  
+  **Important Note:**
+  **Make sure to create this file in this project's folder**
+  So if you have downloaded the project as **C:\Users\VivoJay\Downloads\YouTube-wav-Downloader** then you need to create the file in that SAME folder.
+  \
+  \
+  \
+  **This This is an example of how the file "urls.txt" may look like:**
+
+  ![image](https://user-images.githubusercontent.com/67545205/120674230-871cd000-c4b1-11eb-8c6d-6b15ba05ad09.png)
+
+  Now to download audios from this file, just type `py download.py urls`.
+  
+#### This is all you need to type
+  ![image](https://user-images.githubusercontent.com/67545205/120675442-b2ec8580-c4b2-11eb-80ba-f61a0af15264.png)
+
+#### Choose a download path and continue as usual
+  ![image](https://user-images.githubusercontent.com/67545205/120675532-c8fa4600-c4b2-11eb-91f1-3ac53f1f72ff.png)
+
+- **Method 4 of 4 [Download Playlists from YouTube Music]:**
+  To download playlists, all you need to do is add their links to a txt file named **"yt_playlists.txt"** in **this project's folder**.
+  So if you have downloaded the project as **C:\Users\VivoJay\Downloads\YouTube-wav-Downloader** then you need to create the file in that SAME folder.
+  Now in this file, add the YouTube Music Playlist URLs in *separate lines*.
+  \
+  \
+  **This is an example of how the file "yt_playlists.txt" may look like:**
+  
+  ![image](https://user-images.githubusercontent.com/67545205/120677771-0e1f7780-c4b5-11eb-94aa-5c8fecc33276.png)
+
+  Now to download audios from this file, just type `py download.py yt` and the songs from your YouTube Music Playlist will start downloading.
+
+#### This is all you need to type in cmd
+  ![image](https://user-images.githubusercontent.com/67545205/120678801-1f1cb880-c4b6-11eb-8915-60acebbcd15b.png)
+
+#### After this you can continue downloading as usual
+  ![image](https://user-images.githubusercontent.com/67545205/120679673-124c9480-c4b7-11eb-92ee-645cc27456c4.png)
+#### The Playlists will be loaded and you'll their name and author
+  ![image](https://user-images.githubusercontent.com/67545205/120679946-5fc90180-c4b7-11eb-8140-eba460ab13b4.png)
