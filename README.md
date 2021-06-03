@@ -16,7 +16,7 @@ So for the sake of simplicity and ease of use, this program is dedicated to only
 
 **This program has been tested on Windows OS only and will assume that you have Windows from here on.**
 
-This program **may require** that you [download the 7zip archiving program](https://www.7-zip.org/) (This requirements **depends on availability** of .zip or .7z ffmpeg downloads - see next steps).
+This program **may require** that you [download the 7zip archiving program](https://www.7-zip.org/) (This requirement **depends on availability** of .zip or .7z ffmpeg downloads - see next steps).
 
 - This requires you to first [download ffmpeg](https://www.gyan.dev/ffmpeg/builds/) from GyanDev *(for Windows Only)*. The **ffmpeg essentials release** will suffice. For detailed instructions on how to properly download ffmpeg [watch this video by TroubleChute](https://www.youtube.com/watch?v=r1AtmY-RMyQ).
 
