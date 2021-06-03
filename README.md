@@ -18,7 +18,7 @@ So for the sake of simplicity and ease of use, this program is dedicated to only
 
 This program **may require** that you [download the 7zip archiving program](https://www.7-zip.org/) (This requirement **depends on availability** of .zip or .7z ffmpeg downloads - see next steps).
 
-- This requires you to first [download ffmpeg](https://www.gyan.dev/ffmpeg/builds/) from GyanDev *(for Windows Only)*. The **ffmpeg essentials release** will suffice. For detailed instructions on how to properly download ffmpeg [watch this video by TroubleChute](https://www.youtube.com/watch?v=r1AtmY-RMyQ).
+- This requires you to first [download ffmpeg from GyanDev](https://www.gyan.dev/ffmpeg/builds/) *(for Windows Only)*. The **ffmpeg essentials release** will suffice. For detailed instructions on how to properly download ffmpeg [watch this video by TroubleChute](https://www.youtube.com/watch?v=r1AtmY-RMyQ).
 
 - If the ffmpeg essentials download only has a **.7z** version and not a .zip, you will need to download the [**7zip** archiver](https://www.7-zip.org/) (zip/unzip tool).
 
