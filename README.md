@@ -1,5 +1,6 @@
 
 
+
 # YouTube-wav-downloader
 
 ## Who needs this?
@@ -120,13 +121,19 @@ Here, you can either:
 
 #### Here you have the option to select one or more search results
 - **To select a video just type the number given next to it**
-- **To select a multiple videos type the video numbers separated by spaces**
-![12_PS_Search_Results_Select_Multiple.png](res/PS/12_PS_Search_Results_Select_Multiple.png)
+- **To select a multiple videos type the video numbers separated by spaces**![12_PS_Search_Results_Select_Multiple.png](res/PS/12_PS_Search_Results_Select_Multiple.png)
 
 #### Just like before, enter the path you would like to save the audio(s) to
 ![13_PS_Enter_Path_Just_Like_Before.png](res/PS/13_PS_Enter_Path_Just_Like_Before.png)
+
+#### One thing, if you leave the save location empty, it will automatically save to the Default Download Path
+![14_PS_Download_In_Default_Downloads_Directory](res/PS/14_PS_Download_In_Default_Downloads_Directory.png)
+
 #### The selected audios will be displayed in a table
-![14_PS_Download_In_Default_Downloads_Directory.png](res/PS/14_PS_Download_In_Default_Downloads_Directory.png)
+![15_Shows_Multiple_Search_Selections.png](res/PS/15_Shows_Multiple_Search_Selections.png)
 
 #### As always, the selected audios will open in your browser once you confirm your downloads
 ![Videos_Selections_On_Browser](res/Videos_Selections_On_Browser.png)
+
+### You will now be able to see the downloaded audios where you saved them
+![Files_In_Explorer](res/Files_In_Explorer.png)
