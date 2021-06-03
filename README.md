@@ -1,7 +1,7 @@
 
 
 
-# YouTube-wav-downloader
+# YouTube-wav-Downloader
 
 ## Who needs this?
 
@@ -137,3 +137,4 @@ Here, you can either:
 
 ### You will now be able to see the downloaded audios where you saved them
 ![Files_In_Explorer](res/Files_In_Explorer.png)
+
