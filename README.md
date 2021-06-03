@@ -121,7 +121,7 @@ Here, you can either:
 #### Here you have the option to select one or more search results
 - **To select a video just type the number given next to it**
 - **To select a multiple videos type the video numbers separated by spaces**
-![12_PS_Search_Results_Select_Multiple.png](12_PS_Search_Results_Select_Multiple.png)
+![12_PS_Search_Results_Select_Multiple.png](res/PS/12_PS_Search_Results_Select_Multiple.png)
 
 #### Just like before, enter the path you would like to save the audio(s) to
 ![13_PS_Enter_Path_Just_Like_Before.png](res/PS/13_PS_Enter_Path_Just_Like_Before.png)
