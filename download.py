@@ -17,6 +17,10 @@ os.chdir(curDir)
 NAs = 0
 skipDl = False
 
+def my_hook(d):
+    if d['status'] == 'downloading':
+        print("Downloading: "+ str(round(float(d['downloaded_bytes'])/float(d['total_bytes'])*100,1))+"%", end = '\r')
+
 def SET(x):
     return sorted(set(x), key=x.index)
 
@@ -42,7 +46,7 @@ def yt_srch():
 
     try:
         vidsObj = VideosSearch(srchtrm)
-    except:
+    except Exception:
         print('No search term, exiting...')
         os._exit(0)
 
@@ -64,7 +68,7 @@ def yt_srch():
             vidinfos.extend([[i.get('link'), i.get('title')] for i in vids])
             vidtitles.extend(i[1] for i in vidinfos)
 
-        except:
+        except Exception:
             # print('Less than 30 results')
             pass
         
@@ -93,7 +97,7 @@ def yt_srch():
             numsGet = [int(i) for i in numsGet.split()]
             urlsGet = [vidurls[i-1] for i in numsGet]
             return (urlsGet)
-        except:
+        except Exception:
             print('Atleast 1 invalid value entered...')
             os._exit(0)
             return False
@@ -115,15 +119,53 @@ if not len(sys.argv) == 1:
             os._exit(0)
     else:
         if sys.argv[-1] == 'urls':
-            with open(('\\').join(__file__.split('\\')[:-1])+'\\urls.txt') as f:
-                contt = f.read()
+            try:
+                with open('urls.txt') as f:
+                    contt = f.read()
+            except Exception:
+                raise
+                print('Could not find "urls.txt" in folder, please retry')
+                print('Exiting. . .')
+                os._exit(0)
 
             notice()
             
-            urls = contt.split()
+            urls = contt.splitlines()
             urls = list(set(urls))
 
-        if not len(sys.argv) == 1 and not sys.argv[-1] == 'urls':
+        if sys.argv[-1] == 'yt':
+            try:
+                with open('yt_playlist.txt', encoding="utf8", errors='ignore') as f:
+                    contt = f.read().splitlines()
+            except Exception:
+                print('Could not find "yt_playlist.txt" in folder, please retry')
+                print('Exiting. . .')
+                os._exit(0)
+
+            notice()
+            
+            import scrapeYTMusic as syt
+            # All YT Music Playlists
+            urls = []
+            for playlistURL in contt:
+                print(playlistURL)
+                playlistInfo = syt.getPlaylistInfo(playlistURL)
+                print(f'{playlistInfo[-1]}')
+                urls_in_playlists = [i[0] for i in playlistInfo[0]]
+                urls_in_playlists = list(set(urls_in_playlists))
+                urls.extend(urls_in_playlists)
+
+            # First YT Music Playlist Only
+
+            # playlistURL = contt[0] # If you enter more than one playlists, we'll only consider the first one
+            # playlistInfo = syt.getPlaylistInfo(playlistURL)
+            # print(f'{playlistInfo[-1]}')
+            # urls = [i[0] for i in playlistInfo[0]]
+            # urls = list(set(urls))
+
+            # urls = contt.split()
+
+        if not len(sys.argv) == 1 and not sys.argv[-1] in ['urls', 'yt']:
             urls = [i for i in sys.argv[2:]]
             urls = list(set(urls))
             notice()
@@ -145,7 +187,7 @@ try:
     
     # print(not skipDl)
     if (not os.path.exists(path) or path.isspace() or path == '') and not skipDl:
-        if sys.argv[-1] != 'urls' and not sys.argv[1] == 's':
+        if sys.argv[-1] not in ['urls', 'yt'] and not sys.argv[1] == 's':
             urls = [i for i in sys.argv[1:]]
             urls = list(set(urls))
             print(len(urls), 'video distinct urls entered')
@@ -175,7 +217,7 @@ try:
         if len(urls) == 0:
             print('Exiting...')
             os._exit(0)
-except:
+except Exception:
     if not skipDl:
         print('Unknown destination path error')
 
@@ -190,7 +232,7 @@ def vidinfo(URL):
         vid_title = eval(str(s)).get('title')
         # vid_thumbnail = eval(str(s)).get('thumbnail_url')
         return vid_title
-    except:
+    except Exception:
         NAs += 1
         return 'N/A'
 
@@ -201,7 +243,7 @@ def vidthumb(URL):
         r = requests.get(url).text
         vid_thumbnail = eval(r)['thumbnail_url']
         return vid_thumbnail
-    except:
+    except Exception:
         # NAs += 1
         return 'N/A'
 
@@ -217,22 +259,33 @@ try:
         # 'preferredcodec': 'mp3',
         # 'preferredquality': '192',
         #     }],
-        
-        'outtmpl': path+'/%(title)s.mka', #Name the file as the title of the video in original mka format
+
+        'postprocessors': [{
+        'key': 'FFmpegExtractAudio',
+        'preferredcodec': 'wav',
+        'preferredquality': '192'
+        }],
+
+        'outtmpl': path+'/%(title)s.mka', # Name the file as the title of the video in original mka format ...
+                                          # [This will later be converted to wav]
         'noplaylist': True,
+        'prefer_ffmpeg': True,
         'nocheckcertificate': True,
         'quiet': True,
+        'progress_hooks': [my_hook],
         'no_warnings': True
     }
 
-except:
+except Exception:
     print('Error encountered while setting download parameters, exiting')
     os._exit(0)
 
 if skipDl:
     os._exit(0)
 
+##--
 print('\nLoading video data...')
+# print(urls)
 titles = [[i+1, vidinfo(urls[i]), urls[i]] for i in range(0, len(SET(urls)))]
 titles = [list(i) for i in set([tuple(i) for i in titles])]
 s = [i[1] for i in titles]
@@ -266,8 +319,22 @@ if any(duplicates):
 
 download = input('\nConfirm download(s) (y/n)? ')
 
+# Measure for URL shortening
+titles = [
+            i[:-1]+[
+                    i[-1].replace('https://youtu.be/', 'https://www.youtube.com/watch?v=')
+                ]
+            if i[-1].startswith('https://youtu.be/')
+            else i
+            for i in titles
+    ]
+
+# Measure against duplicates
+titles = [i for i in titles if not i[1] in duplicates]
+
 urls = [i[2] for i in titles if i[1] not in duplicates]
 urls = SET(urls)
+
 
 while not download.lower() in ['y', 'n']:
     download = input('Invalid permission. Confirm download(s) (y/n)? ')
@@ -279,13 +346,13 @@ else:
                 with youtube_dl.YoutubeDL(ydl_opts) as ydl:
                     info = ydl.extract_info(url, download=True)
                 print('Downloaded', i+1, 'of', len(urls), vidinfo(urls[i]))
-            except:
+            except Exception:
                 try:
                     print('Downloading to default Downloads folder')
                     with youtube_dl.YoutubeDL(ydl_opts2) as ydl:
                         info = ydl.extract_info(url, download=True)
                     print('Downloaded', i+1, 'of', len(urls), vidinfo(urls[i]))
-                except:
+                except Exception:
                     print('Unexpected error encountered while downloading and saving', i+1, 'of', len(urls))
 
                     print('Downloaded', len([i for i in urls if vidinfo(i) == 'N/A']), 'distinct new file(s)')
@@ -382,12 +449,11 @@ if download.lower() == 'y':
     with open(path, 'w', encoding = 'utf8') as f:
         f.write(ss)
 
-    print('Converting files to .wav')
-    for i in titles:
+    # print('Converting files to .wav')
+    # for i in titles:
         #print(i[1])
-        convert_to_wav(Dpath, i[1]+'.mka')
+        # convert_to_wav(Dpath, i[1]+'.mka')
 
-    
     # Display the html file with video embeds
     os.chdir(curDir)
 
@@ -407,6 +473,7 @@ if download.lower() == 'y':
     sp.Popen('py flask_main.pyw', shell = True)
     wb.open('http://localhost:5000')
 
-    # Older Method [Python terminal localhost server]
+    # Older Method [Python terminal localhost server] -- The newer method has no clear advantage over this method
+
     # sp.Popen('py -m http.server 78', shell=True)
     # wb.open('http://localhost:78/disp_vid_thumbnails.html')
