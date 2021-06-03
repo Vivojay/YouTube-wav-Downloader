@@ -1,4 +1,5 @@
 
+
 # YouTube-wav-Downloader
 
 ## Who needs this?
@@ -67,9 +68,17 @@ This program **may require** that you [download the 7zip archiving program](http
    **Now you are ready to actually run the program**
 
 3. Just to check if installations have been successful, type `py download.py` and hit enter, if it shows `Error: No parameters entered, exiting...`, then it means **the program is working fine**.
-4. Now to actually download the audio from the YouTube video, there are **two methods.**
+4. Now to actually download the audio from the YouTube video, there are **four methods.**
 
-- **Method 1 of 4 [Download from URL]:** Enter one or multiple URLs in double quotes separated by a space after `py download.py`. For example if you want to download audios from the following URLs:
+## Choose your download method:
+- [Download from URLs](#method-1-of-4-download-from-url)
+- [Search and Download](#Method 2 of 4 [Search and Download]:)
+- [Download using text file](#Method 3 of 4 [Download URLs from text file]:)
+- [Download Playlists from YouTube Music](#Method 4 of 4 [Download Playlists from YouTube Music]:)
+\
+&nbsp;
+## Method 1 of 4 [Download from URL]:
+#### Enter one or multiple URLs in double quotes separated by a space after `py download.py`. For example if you want to download audios from the following URLs:
   - https://www.youtube.com/watch?v=RT5pYfOavkA
   - https://www.youtube.com/watch?v=7XcuZ8wZ3BY
   - https://www.youtube.com/watch?v=2qYLxw0Knu4
@@ -118,7 +127,8 @@ Here, you can either:
 #### It always asks you for confirmation before downloads and you can cancel downloads if you wish
 ![10_PS_Cancel_Downloads.png](res/PS/10_PS_Cancel_Downloads.png)
 
-- **Method 2 of 4 [Search and Download]:** If you want to search for a video and then download it, just type `py download.py s` followed by the search terms (without double quotes this time).
+## Method 2 of 4 [Search and Download]:
+#### If you want to search for a video and then download it, just type `py download.py s` followed by the search terms (without double quotes this time).
   **E.g.** If you want to search for "lolo zouai moi lyric video" then type the following command:
   `py download.py s lolo zouai moi lyric video`
 
@@ -144,7 +154,8 @@ Here, you can either:
 ### You will now be able to see the downloaded audios where you saved them
 ![Files_In_Explorer](res/Files_In_Explorer.png)
 
-- **Method 3 of 4 [Download URLs from text file]:** This provides you an **easier** way to enter URLs.\
+## Method 3 of 4 [Download URLs from text file]:
+### This provides you an **easier** way to enter URLs.
   How does it work?
   Instead of entering URLs in the terminal directly, you can now add them in a text file in *separate lines* and save it in **"urls.txt"**.
   
@@ -166,8 +177,8 @@ Here, you can either:
 #### Choose a download path and continue as usual
   ![image](https://user-images.githubusercontent.com/67545205/120675532-c8fa4600-c4b2-11eb-91f1-3ac53f1f72ff.png)
 
-- **Method 4 of 4 [Download Playlists from YouTube Music]:**
-  To download playlists, all you need to do is add their links to a txt file named **"yt_playlists.txt"** in **this project's folder**.
+## Method 4 of 4 [Download Playlists from YouTube Music]:
+#### To download playlists, all you need to do is add their links to a txt file named **"yt_playlists.txt"** in **this project's folder**.
   So if you have downloaded the project as **C:\Users\VivoJay\Downloads\YouTube-wav-Downloader** then you need to create the file in that SAME folder.
   Now in this file, add the YouTube Music Playlist URLs in *separate lines*.
   \
