@@ -4,7 +4,7 @@
 
 ## Who needs this?
 
-#### This project is primarily intended for music producers to allow them to easily download audios from YouTube videos, but anyone and everyone can use it for their personal work.
+#### This project is primarily intended for music producers to allow them to easily download audios from YouTube videos, but anyone and everyone can use it for their personal work too.
 
 ## Why would you need this?
 
