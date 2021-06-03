@@ -148,7 +148,6 @@ if not len(sys.argv) == 1:
             # All YT Music Playlists
             urls = []
             for playlistURL in contt:
-                print(playlistURL)
                 playlistInfo = syt.getPlaylistInfo(playlistURL)
                 print(f'{playlistInfo[-1]}')
                 urls_in_playlists = [i[0] for i in playlistInfo[0]]
