@@ -34,7 +34,6 @@ This program **may require** that you [download the 7zip archiving program](http
 
 - After this, you need to install some *"python packages"*.
   This is very easy, you just need to enter `pip install -r requirements.txt` in **cmd**.
-  ### Note to reader: Be aware that the requirements.txt has not been uploaded yet
   **cmd** or **command prompt** is a preinstalled application on Windows OS systems.
 
   **To open cmd**, use the shortcut `⊞ Win` +`R`, type `cmd` in the dialog box and hit enter.
