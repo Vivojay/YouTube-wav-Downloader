@@ -72,9 +72,9 @@ This program **may require** that you [download the 7zip archiving program](http
 
 ## Choose your download method:
 - [Download from URLs](#method-1-of-4-download-from-url)
-- [Search and Download](#Method 2 of 4 [Search and Download]:)
-- [Download using text file](#Method 3 of 4 [Download URLs from text file]:)
-- [Download Playlists from YouTube Music](#Method 4 of 4 [Download Playlists from YouTube Music]:)
+- [Search and Download](#method-2-of-4-search-and-download)
+- [Download using text file](#method-3-of-4-download-urls-from-text-file)
+- [Download Playlists from YouTube Music](#method-4-of-4-download-playlists-from-youtube-music)
 \
 &nbsp;
 ## Method 1 of 4 [Download from URL]:
