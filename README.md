@@ -1,6 +1,3 @@
-
-
-
 # YouTube-wav-Downloader
 
 ## Who needs this?
@@ -20,8 +17,10 @@ So for the sake of simplicity and ease of use, this program is dedicated to only
 This program **may require** that you [download the 7zip archiving program](https://www.7-zip.org/) (This requirement **depends on availability** of .zip or .7z ffmpeg downloads - see next steps).
 
 - This requires you to first [download ffmpeg from GyanDev](https://www.gyan.dev/ffmpeg/builds/) *(for Windows Only)*. The **ffmpeg essentials release** will suffice. For detailed instructions on how to properly download ffmpeg [watch this video by TroubleChute](https://www.youtube.com/watch?v=r1AtmY-RMyQ).
+  ![image](https://user-images.githubusercontent.com/67545205/120630336-5ecaac80-c484-11eb-88b1-be4145354986.png)
 
 - If the ffmpeg essentials download only has a **.7z** version and not a .zip, you will need to download the [**7zip** archiver](https://www.7-zip.org/) (zip/unzip tool).
+  ![image](https://user-images.githubusercontent.com/67545205/120630598-9e919400-c484-11eb-96d6-55ce9e8c08f5.png)
 
 - If you haven't already, you will need to install [**python**](https://www.python.org/), preferably the [latest version](https://www.python.org/downloads/). You can also [download python 3.9.5 (Latest version at the time of writing)](https://www.python.org/ftp/python/3.9.5/python-3.9.5-amd64.exe).
 
@@ -47,7 +46,9 @@ This program **may require** that you [download the 7zip archiving program](http
 1. You can download audio from **any** YouTube URL you want.
 2. You can download audios from **multiple** YouTube video URLs at once.
 3. You can use the simple built in **text-based YouTube search** to search and download videos you like.
-4. After confirming downloads, you will be shown the selected downloaded videos **in your browser**.
+4. Any duplicate files will automatically be detected and will NOT be downloaded.
+5. After confirming downloads, you will be shown the selected downloaded videos **in your browser**.
+
 **Note: Downloaded videos are always converted to `.wav` format**
 
 ## Usage Instructions
