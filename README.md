@@ -1,6 +1,6 @@
 
 
-# YouTube-wav-Downloader [C2maroo kool hai]
+# YouTube-wav-Downloader
 
 ## Who needs this?
 
