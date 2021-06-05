@@ -45,7 +45,8 @@ This program **may require** that you [download the 7zip archiving program](http
    ![Image - How to open cmd](res/cmd_runbox.png)
 
 #### When opened, cmd looks like this
-![cmd](https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2019/04/windows-command-line-interface.png)
+<img src="https://user-images.githubusercontent.com/67545205/120892187-9f642a80-c62a-11eb-8170-2feaf0147f88.png" alt="cmd_vs_powershell" width="3000">
+
 
 ## Features
 1. You can download audio from **any** YouTube URL you want.
