@@ -57,7 +57,7 @@ This program **may require** that you [download the 7zip archiving program](http
 4. Any **duplicate files** will automatically be detected and will NOT be downloaded.
 5. *New:* You can now download all songs from **Playlists on YouTube Music**
 6. *New:* You can now download YouTube audios by adding urls to **separate "urls.txt" file** instead of writing typing out each one [Explained Later]
-7. *New:* You can now download songs from Spotify (**\*accuracy may be less**) [NEEDS SPOTIFY API CREDENTIALS!] [Learn more](#) 
+7. *New:* You can now download songs from Spotify (**\*accuracy may be less**) [NEEDS SPOTIFY API CREDENTIALS!] [Learn more](#method-5-of-5-download-songs-from-spotify-playlists) 
 8. After confirming downloads, you will be shown the selected downloaded videos **in your browser**.
 
 **Note: Downloaded videos are always converted to `.wav` format**
