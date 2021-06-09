@@ -85,14 +85,14 @@ This program **may require** that you [download the 7zip archiving program](http
 5. Just to check if installations have been successful, type `py download.py` and hit enter, if it shows `Error: No parameters entered, exiting...`, then it means **the program is working fine**.
    ![image](https://user-images.githubusercontent.com/67545205/121412602-84731c80-c982-11eb-8dcb-ceb62abadf59.png)
 
-6. **Now you are ready to actually run the program**. To start downloading audio, there are **five methods.** Choose from below
+6. **Now you are ready to actually run the program**. To start downloading audio, there are **five methods.** Pick any one given below
 
 ## Choose your download method:
-- [Download from URLs](#method-1-of-5-download-from-url)
-- [Search and Download](#method-2-of-5-search-and-download)
-- [Download using text file](#method-3-of-5-download-urls-from-text-file)
+- [Download from YouTube URLs](#method-1-of-5-download-from-url)
+- [Search and Download from YouTube](#method-2-of-5-search-and-download)
+- [YouTube Download from text file](#method-3-of-5-download-urls-from-text-file)
 - [Download Playlists from YouTube Music](#method-4-of-5-download-playlists-from-youtube-music)
-- *New* [Download songs from Spotify Playlists](#method-5-of-5-download-songs-from-spotify-playlists)
+- *New* [Download songs from *Spotify* Playlists](#method-5-of-5-download-songs-from-spotify-playlists)
 \
 &nbsp;
 ## Method 1 of 5 [Download from URL]:
