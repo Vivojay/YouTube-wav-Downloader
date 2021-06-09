@@ -248,7 +248,7 @@ Anyways, if you want a quick start, view this small and quick ["BASIC TUTORIAL"]
 
 
 ## Extras - Spotify Developers Tutorial
-1. Visit the [Spotify Dashboard](https://developer.spotify.com/dashboard/login) and create sign up.
+1. Visit the [Spotify Dashboard](https://developer.spotify.com/dashboard/login) and sign up.
    ![image](https://user-images.githubusercontent.com/67545205/121416516-84751b80-c986-11eb-9f22-a9363342d89e.png)
 2. Accept their terms
    ![image](https://user-images.githubusercontent.com/67545205/121416846-e6358580-c986-11eb-8683-a88af3a7f4d2.png)
