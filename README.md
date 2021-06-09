@@ -47,6 +47,8 @@ This program **may require** that you [download the 7zip archiving program](http
 #### When opened, cmd looks like this
 <img src="https://user-images.githubusercontent.com/67545205/120892187-9f642a80-c62a-11eb-8170-2feaf0147f88.png" alt="cmd_vs_powershell" width="3000">
 
+- **Note: After running the** `pip install -r requirements.txt` **you'll be greeted with a looong installation, don't mind, keep waiting and continue once done!**
+
 
 ## Features
 1. You can download audio from **any** YouTube URL you want.
@@ -55,21 +57,35 @@ This program **may require** that you [download the 7zip archiving program](http
 4. Any **duplicate files** will automatically be detected and will NOT be downloaded.
 5. *New:* You can now download all songs from **Playlists on YouTube Music**
 6. *New:* You can now download YouTube audios by adding urls to **separate "urls.txt" file** instead of writing typing out each one [Explained Later]
-7. After confirming downloads, you will be shown the selected downloaded videos **in your browser**.
+7. *New:* You can now download songs from Spotify (**\*accuracy may be less**) [NEEDS SPOTIFY API CREDENTIALS!] [Learn more](#) 
+8. After confirming downloads, you will be shown the selected downloaded videos **in your browser**.
 
 **Note: Downloaded videos are always converted to `.wav` format**
 
 ## Usage Instructions
-1. **Make sure all requirements are satisfied before starting with the usage.**
+1. **Make sure all requirements are satisfied before starting with this program.**
 2. When cmd opens up, type the path to the folder where this project's files are downloaded.
    **E.g.** If you have downloaded the files in the folder **youtube_downloader** in the location 
    **C:\Users\Vivo Jay\Downloads** you will need to do the following:
-   Type `cd "C:\Users\Vivo Jay\Downloads"` and hit enter.
+   Type `cd "C:\Users\Vivo Jay\Downloads"` and hit enter (Double quotes are required).
+   ![image](https://user-images.githubusercontent.com/67545205/121413230-1d099c80-c983-11eb-9285-4849e89eff14.png)
 
-   **Now you are ready to actually run the program**
+3. Type `pip` and then `py --version` and check if they work\
+   \
+   ![image](https://user-images.githubusercontent.com/67545205/121410804-981d8380-c980-11eb-87a5-2290890d184f.png)
+  
+   We DON'T want this (If this happens, you must **REINSTALL PYTHON [See in "Requirements"]**):\
+   ![image](https://user-images.githubusercontent.com/67545205/121412391-4970e900-c982-11eb-8b9b-34703619118c.png)
 
-3. Just to check if installations have been successful, type `py download.py` and hit enter, if it shows `Error: No parameters entered, exiting...`, then it means **the program is working fine**.
-4. Now to actually download the audio from the YouTube video, there are **four methods.**
+
+4. Now, type `pip install -r -requirements.txt` [See from Heading "Requirements"]
+   **You don't need to do this again if you have done it once.**
+   ![image](https://user-images.githubusercontent.com/67545205/121412895-ca2fe500-c982-11eb-9b03-d917c1b78807.png)
+
+5. Just to check if installations have been successful, type `py download.py` and hit enter, if it shows `Error: No parameters entered, exiting...`, then it means **the program is working fine**.
+   ![image](https://user-images.githubusercontent.com/67545205/121412602-84731c80-c982-11eb-8dcb-ceb62abadf59.png)
+
+6. **Now you are ready to actually run the program**. To start downloading audio, there are **five methods.** Choose from below
 
 ## Choose your download method:
 - [Download from URLs](#method-1-of-5-download-from-url)
@@ -200,6 +216,11 @@ Here, you can either:
 
 ## Method 5 of 5 [Download songs from Spotify Playlists]:
 
+### This requires you to register on developers.spotify.com as a developer and get your "SPOTIFY API KEY"
+If you are NOT familiar with this, you can leave this method. This method delves into a bit more advanced stuff than the rest of this program.
+
+Anyways, if you want a quick start, view this small and quick ["BASIC TUTORIAL"](#extras---spotify-developers-tutorial) and come back here once you're done.
+
 ### Simple guide on **How to find spotify playlist URIs** given later. . .
 ### This method is similar to Method 4:
 #### To download spotify playlists, all you need to do is add their links to a txt file named **"spot_playlists.txt"** in **this project's folder**.
@@ -224,3 +245,25 @@ Here, you can either:
 
 ### Right click on the playlist, go to `Share`, select `Copy link to Playlist`
 ![Selecting_Playlist_URI](https://user-images.githubusercontent.com/67545205/121406187-7bcb1800-c97b-11eb-9bcd-9b869dbde24a.png)
+
+
+## Extras - Spotify Developers Tutorial
+1. Visit the [Spotify Dashboard](https://developer.spotify.com/dashboard/login) and create sign up.
+   ![image](https://user-images.githubusercontent.com/67545205/121416516-84751b80-c986-11eb-9f22-a9363342d89e.png)
+2. Accept their terms
+   ![image](https://user-images.githubusercontent.com/67545205/121416846-e6358580-c986-11eb-8683-a88af3a7f4d2.png)
+3. Click "Create an App"
+   ![image](https://user-images.githubusercontent.com/67545205/121416902-f77e9200-c986-11eb-9e8c-40a2047da8a9.png)
+4. Name it whatever you want (E.g. "Cool App"), tick the checkboxes, add any description and hit "create"
+   ![image](https://user-images.githubusercontent.com/67545205/121417002-12510680-c987-11eb-8de7-c069e561023a.png)
+5. NEVER share your "Client ID" or "Client Secret" with anyone (Not even yourself \s)
+   ![image](https://user-images.githubusercontent.com/67545205/121417402-7c69ab80-c987-11eb-87db-b49d53359777.png)
+6. Use the `SET` command in cmd as follows:
+   If your Client ID is `99999999999999999999aaaaaaaaaaaa` and
+   your Client Secret is `11111111111111111111bbbbbbbbbbbb`, then:
+   
+   Open the commands prompt and type the following commands [Replace these with your own ID and Secret]:
+   - `SET SPOT_CLIENT_ID=99999999999999999999aaaaaaaaaaaa`
+   - `SET SPOT_CLIENT_SECRET=11111111111111111111bbbbbbbbbbbb`
+   
+   After this, you are set to start downloading your own Spotify Playlist Tracks, [go here](#method-5-of-5-download-songs-from-spotify-playlists)
