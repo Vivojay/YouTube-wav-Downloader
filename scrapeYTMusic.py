@@ -12,7 +12,7 @@ Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) 
 
 #user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
 user_agent='Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36'
-url = "https://music.youtube.com/playlist?list=PLJoxe5lD4jPMxJsU-XCoWAiHTRgI443Ej&feature=share"
+url = "https://music.youtube.com/playlist?list=PLJoxe5lD4jPOxa-ntt4rr4SqGjda2n5FL"
 
 def read_webpage(url):
     headers={'User-Agent':user_agent,}
@@ -38,7 +38,7 @@ def getPlaylistInfo(playlistURL):
         playlistID = playlistURL.lstrip('https://music.youtube.com/playlist?list=')
 
     YTPlaylistTitle = ytmusic.get_playlist(playlistId=playlistID)['title']
-    YTPlaylistAuthor = ytmusic.get_playlist('PLJoxe5lD4jPMxJsU-XCoWAiHTRgI443Ej')['author']['name']
+    YTPlaylistAuthor = ytmusic.get_playlist(playlistId=playlistID)['author']['name']
     YTVidTrackUrls = ['https://www.youtube.com/watch?v='+i['videoId'] for i in ytmusic.get_playlist(playlistId=playlistID)['tracks']]
     YTVidTrackTitles = [i['title'] for i in ytmusic.get_playlist(playlistId=playlistID)['tracks']]
     return [list(zip(YTVidTrackUrls, YTVidTrackTitles)), f'Playlist "{YTPlaylistTitle}" by "{YTPlaylistAuthor}"']
