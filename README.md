@@ -76,7 +76,7 @@ This program **may require** that you [download the 7zip archiving program](http
 - [Search and Download](#method-2-of-5-search-and-download)
 - [Download using text file](#method-3-of-5-download-urls-from-text-file)
 - [Download Playlists from YouTube Music](#method-4-of-5-download-playlists-from-youtube-music)
-- *New* [Download songs from Spotify Playlists](#)
+- *New* [Download songs from Spotify Playlists](#method-5-of-5-download-songs-from-spotify-playlists)
 \
 &nbsp;
 ## Method 1 of 5 [Download from URL]:
