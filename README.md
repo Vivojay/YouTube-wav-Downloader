@@ -72,13 +72,14 @@ This program **may require** that you [download the 7zip archiving program](http
 4. Now to actually download the audio from the YouTube video, there are **four methods.**
 
 ## Choose your download method:
-- [Download from URLs](#method-1-of-4-download-from-url)
-- [Search and Download](#method-2-of-4-search-and-download)
-- [Download using text file](#method-3-of-4-download-urls-from-text-file)
-- [Download Playlists from YouTube Music](#method-4-of-4-download-playlists-from-youtube-music)
+- [Download from URLs](#method-1-of-5-download-from-url)
+- [Search and Download](#method-2-of-5-search-and-download)
+- [Download using text file](#method-3-of-5-download-urls-from-text-file)
+- [Download Playlists from YouTube Music](#method-4-of-5-download-playlists-from-youtube-music)
+- *New* [Download songs from Spotify Playlists](#)
 \
 &nbsp;
-## Method 1 of 4 [Download from URL]:
+## Method 1 of 5 [Download from URL]:
 #### Enter one or multiple URLs in double quotes separated by a space after `py download.py`. For example if you want to download audios from the following URLs:
   - https://www.youtube.com/watch?v=RT5pYfOavkA
   - https://www.youtube.com/watch?v=7XcuZ8wZ3BY
@@ -128,7 +129,7 @@ Here, you can either:
 #### It always asks you for confirmation before downloads and you can cancel downloads if you wish
 ![10_PS_Cancel_Downloads.png](res/PS/10_PS_Cancel_Downloads.png)
 
-## Method 2 of 4 [Search and Download]:
+## Method 2 of 5 [Search and Download]:
 #### If you want to search for a video and then download it, just type `py download.py s` followed by the search terms (without double quotes this time).
   **E.g.** If you want to search for "lolo zouai moi lyric video" then type the following command:
   `py download.py s lolo zouai moi lyric video`
@@ -155,7 +156,7 @@ Here, you can either:
 ### You will now be able to see the downloaded audios where you saved them
 ![Files_In_Explorer](res/Files_In_Explorer.png)
 
-## Method 3 of 4 [Download URLs from text file]:
+## Method 3 of 5 [Download URLs from text file]:
 ### This provides you an **easier** way to enter URLs.
   How does it work?
   Instead of entering URLs in the terminal directly, you can now add them in a text file in *separate lines* and save it in **"urls.txt"**.
@@ -178,8 +179,8 @@ Here, you can either:
 #### Choose a download path and continue as usual
   ![image](https://user-images.githubusercontent.com/67545205/120675532-c8fa4600-c4b2-11eb-91f1-3ac53f1f72ff.png)
 
-## Method 4 of 4 [Download Playlists from YouTube Music]:
-#### To download playlists, all you need to do is add their links to a txt file named **"yt_playlists.txt"** in **this project's folder**.
+## Method 4 of 5 [Download Playlists from YouTube Music]:
+#### To download YouTube Music playlists, all you need to do is add their links to a txt file named **"yt_playlists.txt"** in **this project's folder**.
   So if you have downloaded the project as **C:\Users\VivoJay\Downloads\YouTube-wav-Downloader** then you need to create the file in that SAME folder.
   Now in this file, add the YouTube Music Playlist URLs in *separate lines*.
   \
@@ -188,12 +189,38 @@ Here, you can either:
   
   ![image](https://user-images.githubusercontent.com/67545205/120677771-0e1f7780-c4b5-11eb-94aa-5c8fecc33276.png)
 
-  Now to download audios from this file, just type `py download.py yt` and the songs from your YouTube Music Playlist will start downloading.
-
 #### This is all you need to type in cmd
   ![image](https://user-images.githubusercontent.com/67545205/120678801-1f1cb880-c4b6-11eb-8915-60acebbcd15b.png)
+  **Note:** This can take some time!
 
 #### After this you can continue downloading as usual
   ![image](https://user-images.githubusercontent.com/67545205/120679673-124c9480-c4b7-11eb-92ee-645cc27456c4.png)
 #### The Playlists will be loaded and you'll their name and author
   ![image](https://user-images.githubusercontent.com/67545205/120679946-5fc90180-c4b7-11eb-8140-eba460ab13b4.png)
+
+## Method 5 of 5 [Download songs from Spotify Playlists]:
+
+### Simple guide on **How to find spotify playlist URIs** given later. . .
+### This method is similar to Method 4:
+#### To download spotify playlists, all you need to do is add their links to a txt file named **"spot_playlists.txt"** in **this project's folder**.
+  So if you have downloaded the project as **C:\Users\VivoJay\Downloads\YouTube-wav-Downloader** then you need to create the file in that SAME folder.
+  Now in this file, add the YouTube Music Playlist URLs in *separate lines*.
+  \
+  \
+  **This is an example of how the file "spot_playlists.txt" may look like:**
+  ![image](https://user-images.githubusercontent.com/67545205/121406579-ef6d2500-c97b-11eb-8aaa-730dbad8a8fc.png)
+  #### The playlists tracks will now be loaded one-by-one
+  
+  Now to download audios from this file, just type `py download.py spot` and the songs from your selected Spotify Playlist will start loading.
+  ![image](https://user-images.githubusercontent.com/67545205/121406858-4d9a0800-c97c-11eb-894d-5563e41d5f04.png)
+  **Note:** This can take some time!
+  ![image](https://user-images.githubusercontent.com/67545205/121407130-9d78cf00-c97c-11eb-843c-ae53a866800a.png)
+
+  Download where you wish
+  ![image](https://user-images.githubusercontent.com/67545205/121407417-e92b7880-c97c-11eb-880b-cf162177c456.png)
+  **Now continue normally, the program will guide you**
+
+
+
+### Right click on the playlist, go to `Share`, select `Copy link to Playlist`
+![Selecting_Playlist_URI](https://user-images.githubusercontent.com/67545205/121406187-7bcb1800-c97b-11eb-9bcd-9b869dbde24a.png)
