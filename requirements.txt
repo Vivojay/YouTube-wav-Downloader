@@ -1,0 +1,7 @@
+ffmpeg_python
+youtube_dl
+tabulate
+youtube_search_python
+requests
+beautifulsoup4
+ffmpeg
