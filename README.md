@@ -22,7 +22,8 @@ This program **may require** that you [download the 7zip archiving program](http
 
   ![image](https://user-images.githubusercontent.com/67545205/120630336-5ecaac80-c484-11eb-88b1-be4145354986.png)
 
-  For detailed instructions on how to properly download ffmpeg watch this excellent video by TroubleChute on YouTube[![FFMPEG Download Instructions on YouTube by TroubleChute](https://user-images.githubusercontent.com/67545205/120638446-bde0ef00-c48d-11eb-8d30-ed01b699cdb6.png)](https://www.youtube.com/watch?v=r1AtmY-RMyQ).
+  For detailed instructions on how to properly download ffmpeg watch this excellent video by TroubleChute on YouTube
+  [![FFMPEG Download Instructions on YouTube by TroubleChute](https://user-images.githubusercontent.com/67545205/120638446-bde0ef00-c48d-11eb-8d30-ed01b699cdb6.png)](https://www.youtube.com/watch?v=r1AtmY-RMyQ).
 
 - If the ffmpeg essentials download only has a **.7z** version and not a .zip, you will need to download the [**7zip** archiver](https://www.7-zip.org/) (zip/unzip tool).
   ![image](https://user-images.githubusercontent.com/67545205/120630598-9e919400-c484-11eb-96d6-55ce9e8c08f5.png)
